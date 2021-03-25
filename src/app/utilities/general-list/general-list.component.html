@@ -1,0 +1,20 @@
+<div *ngIf="!lists">
+    <span #loading>
+        <ng-content select="[loading]"></ng-content>
+    </span>
+    <span *ngIf="!loading.innerHTML.trim()">
+        <img src="https://hackernoon.com/images/0*4Gzjgh9Y7Gu8KEtZ.gif" alt="Loading" id="loading-items">
+    </span>
+</div>
+
+<div *ngIf="lists?.length === 0">
+    <span #empty>
+        <ng-content select="[empty]"></ng-content>
+    </span>
+    <span *ngIf="!empty.innerHTML.trim()">
+        There are no records to display
+    </span> 
+</div>
+<ng-container *ngIf="lists && lists.length > 0">
+    <ng-content select="[content]"></ng-content>
+</ng-container>
