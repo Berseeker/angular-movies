@@ -1,7 +1,21 @@
 <mat-toolbar color="primary">
     <span>
-        <a mat-button>
-            <mat-icon>local_movies</mat-icon> Angular Movies
+        <a routerLink="" mat-button>
+            <mat-icon>local_movies</mat-icon> Peliculas Thompsoon
         </a>
     </span>
+
+    <div>
+        <a mat-button routerLink="genders" >Generos</a>
+    </div>
+    <div>
+        <a mat-button routerLink="actors" >Actores</a>
+    </div>
+    <div>
+        <a mat-button routerLink="movietheaters" >Cines</a>
+    </div>
+    <div>
+        <a mat-button routerLink="movies/create" >Nueva Pelicula</a>
+    </div>
+
 </mat-toolbar>
