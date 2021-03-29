@@ -4,17 +4,22 @@ import { CreateActorComponent } from './actors/create-actor/create-actor.compone
 import { EditActorComponent } from './actors/edit-actor/edit-actor.component';
 import { IndexActorsComponent } from './actors/index-actors/index-actors.component';
 import { CreateGenderComponent } from './genders/create-gender/create-gender.component';
+import { EditGenderComponent } from './genders/edit-gender/edit-gender.component';
 import { IndexGendersComponent } from './genders/index-genders/index-genders.component';
 import { HomeComponent } from './home/home.component';
 import { CreateMovieTheaterComponent } from './movie-theaters/create-movie-theater/create-movie-theater.component';
+import { EditMovieTheaterComponent } from './movie-theaters/edit-movie-theater/edit-movie-theater.component';
 import { IndexMovieTheaterComponent } from './movie-theaters/index-movie-theater/index-movie-theater.component';
 import { CreateMovieComponent } from './movies/create-movie/create-movie.component';
+import { EditMovieComponent } from './movies/edit-movie/edit-movie.component';
+import { MovieFilterComponent } from './movies/movie-filter/movie-filter.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
 
   {path: 'genders', component: IndexGendersComponent},
   {path: 'genders/create', component: CreateGenderComponent},
+  {path: 'genders/edit/:id', component: EditGenderComponent},
 
   {path: 'actors', component: IndexActorsComponent},
   {path: 'actors/create', component: CreateActorComponent},
@@ -22,8 +27,12 @@ const routes: Routes = [
 
   {path: 'movietheaters', component: IndexMovieTheaterComponent},
   {path: 'movietheaters/create', component: CreateMovieTheaterComponent},
+  {path: 'movietheaters/edit/:id', component: EditMovieTheaterComponent},
 
-  {path: 'movies/create', component: CreateMovieComponent}
+  {path: 'movies/create', component: CreateMovieComponent},
+  {path: 'movies/edit/:id', component: EditMovieComponent},
+  {path: 'movies/filter', component: MovieFilterComponent},
+  {path: '**',redirectTo: ''} // aqui va la pagina de 404 not found component
 ];
 
 @NgModule({

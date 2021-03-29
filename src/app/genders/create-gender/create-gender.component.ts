@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { genderCreationDTO } from '../gender.model';
 
 @Component({
   selector: 'app-create-gender',
@@ -8,13 +9,16 @@ import { Router } from '@angular/router';
 })
 export class CreateGenderComponent implements OnInit {
 
-  constructor(private router: Router) { }
+  constructor(private router: Router) {}
 
-  ngOnInit(): void {
+
+  ngOnInit(): void {  
   }
 
-  saveChanges(){
+  saveChanges(genderCreationDTO: genderCreationDTO){
     //save the gender
+    console.log(genderCreationDTO);
     this.router.navigate(['genders'])
   }
+
 }
